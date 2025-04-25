@@ -24,6 +24,7 @@ export class UsersController {
   // `POST /users`: Add a new user.
   @Post()
   create(req: any): string { 
+    console.log(req); // Log the request body for debugging
     const newUser = req.body;
     if (!newUser.name) {  
       return `User name is required`;
